@@ -156,7 +156,7 @@ def zone_transfer(address, domain):
 
 
 def get_class_c_network(ip):
-    ip = int(ip)
+    int(ip)
     floored = ipaddress.ip_address(ip - (ip % (2**8)))
     class_c = ipaddress.IPv4Network('{}/24'.format(floored))
 
@@ -168,7 +168,7 @@ def default_expander(ip):
 
 
 def traverse_expander(ip, n=5):
-    ip = int(ip)
+    int(ip)
     class_c_floor = ip - (ip % 256)
     class_c_ceiling = class_c_floor + 255
 
